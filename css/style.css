@@ -1,125 +1,84 @@
-*{
-    position:absolute;
-}
-#favi{
-    float:left;
-}
-
-
-#mainimg {
-    /* Layout Properties */
-    top: 72px;
-    left: 166px;
-    width: 576px;
-    height: 576px;
-    /* UI Properties */
-    background: transparent url('img/Ellipse 2.png') 0% 0% no-repeat padding-box;
-    box-shadow: 0px 4px 31px #0000000A;
+#img1 {
+    border-radius: 50%;
     border: 20px solid #FFFFFF;
-    opacity: 1;
-    border-radius:50%;
+    box-shadow: 0px 4px 31px #ADADAD;
+    opacity: 70;
 }
 
-
-#usrn {
-    top: 372px;
-    left: 907px;
-    width: 429px;
-    height: 49px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #ADADAD;
-    border-radius: 5px;
-    opacity: 1;
-}
-
-#pwd {
-    top: 448px;
-    left: 907px;
-    width: 429px;
-    height: 49px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #ADADAD;
-    border-radius: 5px;
-    opacity: 1;
-}
-
-.com {
-    top: 106px;
-    left: 906px;
-    width: 272px;
-    height: 58px;
-    opacity: 1;
-}
-
-.exp {
-    top: 183px;
-    left: 905px;
-    width: 500px;
+#logo {
+    width: 270px;
     height: 100px;
-    text-align: left;
-    font: normal normal 300 40px/47px Roboto;
-    letter-spacing: 0px;
-    color: #3E3E3E;
-    opacity: 1;
 }
 
-#login {
-    top: 315px;
-    left: 904px;
-    width: 260px;
-    height: 33px;
-    text-align: left;
-    font: normal normal normal 25px/33px Roboto;
-    letter-spacing: 0px;
-    color: #3E3E3E;
-    opacity: 1;
-    Interactions
+#leftdiv {
+    margin: 150px 0px 0px 220px;
+    opacity: 70;
+    float: left;
 }
 
-#loginbtn {
-    top: 527px;
-    left: 906px;
-    width: 138px;
-    height: 45px;
-    background: #C8242F 0% 0% no-repeat padding-box;
-    border-radius: 23px;
-    opacity: 1;
-    color:white;
-    border:none;
+#rightdiv {
+    float: left;
+    margin: 150px 0px 0px 150px;
 }
 
-#forbtn {
-    top: 539px;
-    left: 1214px;
-    width: 121px;
-    height: 20px;
-    text-align: left;
-    font: normal normal normal 15px/20px Roboto;
-    letter-spacing: 0px;
-    color: #ADADAD;
-    opacity: 1;
+#body {
+    background: transparent url('img/Ellipse 2.png') 10% 10% no-repeat padding-box;
 }
 
-#newm {
-    top: 595px;
-    left: 906px;
-    width: 160px;
-    height: 20px;
-    text-align: left;
-    font: normal normal normal 15px/20px Roboto;
-    letter-spacing: 0px;
-    color: #ADADAD;
-    opacity: 1;
+#tagline {
+    font-size: 40px;
+    font-family: Rubik;
+    width: 550px;
 }
 
-#reg {
-    top: 595px;
-    left: 1070px;
-    width: 88px;
-    height: 20px;
-    text-align: left;
-    font: normal normal normal 15px/20px Roboto;
-    letter-spacing: 0px;
+#experts {
     color: #C8242F;
+}
+
+.inp {
+    padding-left: 13px;
+    border: 1px solid #ADADAD;
+    color: #ADADAD;
     opacity: 1;
+    border-radius: 10px;
+    width: 429px;
+    height: 49px;
+    font-size: 15px;
+}
+
+#login_button {
+    font-size: 18px;
+    padding: 11px 46px 11px 46px;
+    background-color: #C8242F;
+    color: white;
+    border-radius: 32px;
+    border-color: #C8242F;
+    margin-top: 30px;
+    margin-right: 200px;
+    border-width: 0px;
+}
+
+#label1 {
+    margin-bottom: 24px;
+    font-size: 25px;
+}
+
+#footer {
+    font-family: Rubik;
+    font-size: 20px;
+    color: #ADADAD;
+    margin-top: 35px;
+}
+
+#footspan {
+    color: #C8242F;
+    font-size: 20px;
+}
+
+* {
+    font-family: Rubik;
+}
+
+#forget_password {
+    color: #ADADAD;
 }

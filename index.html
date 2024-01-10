@@ -1,27 +1,36 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    </head>
-    <body>
-        <div>
-            <img src="/images/hero-image.png" id="mainimg" />
-        </div>
-        <div class="head">
-            <div class="com">
-                <img src="/images/logo.svg" />
-            </div>
-            <p class="exp">We are experts in business, marketing, growth, & sales</p>
-            <p id="login">Login into your account</p>
-            <div class="inpdiv">
-                <input type="text" value="Username" id="usrn"/>
-                <input type="password" value="Password" id="pwd" />
-            </div>
-            
-            <button id="loginbtn">Login</button>
-            <button id="forbtn">Forgot Password</button>
-            <p id="newm">Are you a new member?</p>
-            <p id="reg">Register Here</p>
-        </div>
-        
-    </body>
+<head>
+    <title>
+        SIGN IN PAGE
+    </title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body id="body">
+    <div id="leftdiv">
+        <img id="img1" src="/images/hero-image.png" alt="Landing Image Missing" />
+    </div>
+
+    <div id="rightdiv">
+        <img src="/images/logo.svg" alt="Logo Missing" id="logo" />
+        <br />
+        <p id="tagline">
+            We are <span id="experts"><b>experts</b></span> in business,<br /> marketing, growth & sales.
+        </p>
+        <form>
+            <label id="label1">
+                Login into your account
+            </label>
+            <br />
+            <input class="inp" type="text" name="uname" placeholder="Username" style="border-radius:5px; margin-top:24px;" width="60px" height="25px" />
+            <br />
+            <input class="inp" type="text" name="pword" placeholder="Password" style="border-radius:5px; margin-top:27px; " width="60px" height="25px" />
+            <br />
+            <button id="login_button" type="button">Login</button>
+            <span id="forget_password"> Forgot Password?</span>
+            <br />
+            <p id="footer">Are you a new member?<span id="footspan"> Register here</span></p>
+        </form>
+    </div>
+</body>
 </html>
