@@ -20,7 +20,7 @@ body {
         height: 37%;
     }
 
-    .discription {
+    .description {
         width: 67%;
     }
 
@@ -47,9 +47,6 @@ body {
         height: 60%;
     }
 
-    .discription {
-    }
-
     .login-btn {
         width: 21%;
     }
@@ -57,14 +54,14 @@ body {
 
 @media screen and (max-width:600px) {
     .container3 {
-        /* flex-direction: column; */
+        flex-direction: column;
     }
 
     .login-btn {
         width: 40%
     }
 
-    .discription {
+    .description {
         font: normal normal 300 30px/47px Roboto;
     }
 }
@@ -74,7 +71,7 @@ body {
         align-items: center;
     }
 
-    .discription {
+    .description {
         font: normal normal 300 40px/47px Roboto;
     }
 }
@@ -99,7 +96,7 @@ body {
     height: 58px;
 }
 
-.discription {
+.description {
     margin-top: 19px;
     text-align: left;
     /* font: normal normal 300 40px/47px Roboto; */
@@ -148,155 +145,3 @@ body {
     color: white;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-
-body {
-    background: #FAFAFA 0% 0% no-repeat padding-box;
-    opacity: 1;
-    font-family: 'Roboto';
-}
-
-@media screen and (min-width: 1050px) {
-    .index {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .main_image {
-        margin-left: 10%;
-        margin-right: 10%;
-        width: 37%;
-        height: 37%;
-    }
-
-    .discription {
-        width: 67%;
-    }
-
-    .login-btn {
-        width: 21%;
-    }
-
-    .container2 {
-        margin-top: 106px;
-    }
-}
-
-@media screen and (max-width:1050px) {
-    .container2 {
-        width: 70%;
-        margin: auto;
-        margin-top: 30px;
-    }
-
-    .main_image {
-        margin-left: 20%;
-        margin-right: 20%;
-        width: 60%;
-        height: 60%;
-    }
-
-    .discription {
-    }
-
-    .login-btn {
-        width: 21%;
-    }
-}
-
-@media screen and (max-width:600px) {
-    .container3 {
-        flex-direction: column;
-    }
-
-    .login-btn {
-        width: 40%
-    }
-
-    .discription {
-        font: normal normal 300 30px/47px Roboto;
-    }
-
-    .logo {
-        width: 200px;
-        height: 58px;
-    }
-}
-
-@media screen and (min-width:600px) {
-    .container3 {
-        align-items: center;
-    }
-
-    .discription {
-        font: normal normal 300 40px/47px Roboto;
-    }
-
-    .logo {
-        width: 272px;
-        height: 58px;
-    }
-}
-
-.main_image {
-    margin-top: 72px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 31px #0000000A;
-    border: 20px solid #FFFFFF;
-    opacity: 1;
-}
-
-.container2 {
-    display: flex;
-    flex-direction: column;
-}
-
-.discription {
-    margin-top: 19px;
-    text-align: left;
-    /* font: normal normal 300 40px/47px Roboto; */
-    letter-spacing: 0px;
-    color: #3E3E3E;
-    opacity: 1;
-}
-
-.color-red {
-    color: #C8242F;
-}
-
-.titlelogin {
-    margin-top: 31px;
-    text-align: left;
-    font: normal normal normal 25px/33px Roboto;
-    letter-spacing: 0px;
-    color: #3E3E3E;
-    opacity: 1;
-}
-
-.container2 input {
-    padding-left: 14px;
-    margin-bottom: 27px;
-    width: 70%;
-    height: 49px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #ADADAD;
-    border-radius: 5px;
-    opacity: 1;
-}
-
-.container3 {
-    margin-top: 3px;
-    margin-bottom: 23px;
-    display: flex;
-    /* justify-content: space-between; */
-}
-
-.login-btn {
-    height: 45px;
-    margin-right: 26%;
-    background: #C8242F 0% 0% no-repeat padding-box;
-    border-radius: 23px;
-    border: none;
-    color: white;
-}
