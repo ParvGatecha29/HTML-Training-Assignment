@@ -5,35 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
     <link rel="stylesheet" href="css/dashboard.css">
     <title>Dashboard</title>
-    <script>
-        function openNav() {
-            var x = document.getElementById("d-sidebar");
-            if (x.style.display == "none") {
-                x.style.display = "block";
-            }
-            else {
-                x.style.display = "none";
-            }
-        }
-
-        function clickside(t) {
-            var s = document.getElementById("d-sidebar");
-            var e = s.getElementsByTagName("div");
-            for (var i = 0; i < e.length; i++) {
-                e[i].classList.remove("d-text-selected");
-                e[i].classList.remove("s-selected-icon");
-                var x = e[i].getElementsByTagName("img");
-                x[0].src = x[0].src.replace("active", "default");
-            }
-            t.classList.add("d-text-selected");
-            t.classList.add("s-selected-icon");
-            var x = t.getElementsByTagName("img");
-            x[0].src = x[0].src.replace("default", "active");
-        }
-    </script>
+    
 </head>
 <body>
     <div class="d-main-container container-fluid">
@@ -302,6 +277,32 @@
             </div>
         </div>
     </div>
-    
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openNav() {
+            var x = document.getElementById("d-sidebar");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+
+        function clickside(t) {
+            var s = document.getElementById("d-sidebar");
+            var e = s.getElementsByTagName("div");
+            for (var i = 0; i < e.length; i++) {
+                e[i].classList.remove("d-text-selected");
+                e[i].classList.remove("s-selected-icon");
+                var x = e[i].getElementsByTagName("img");
+                x[0].src = x[0].src.replace("active", "default");
+            }
+            t.classList.add("d-text-selected");
+            t.classList.add("s-selected-icon");
+            var x = t.getElementsByTagName("img");
+            x[0].src = x[0].src.replace("default", "active");
+        }
+    </script>
 </body>
 </html>
