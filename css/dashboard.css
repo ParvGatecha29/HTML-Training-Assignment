@@ -334,8 +334,7 @@ body {
 .d-menu-bar {
     margin-top: 34px;
     margin-left: 29px;
-    width: 36px;
-    height: 36px;
+    width:30px;
 }
 
 .col-logo {
@@ -379,8 +378,8 @@ body {
     .d-searchbar {
         margin-left: 10px;
         height: 40px;
-        border-radius: 5px;
         padding-left: 10px;
+        border:none;
     }
 
     .d-logo {
@@ -401,8 +400,8 @@ body {
 
     .d-downward {
         margin-left: 14px;
-        width: 10px;
-        height: 6px;
+        width: 40px;
+        height: 24px;
     }
 
     .col-profile {
@@ -474,6 +473,14 @@ body {
 .s-selected-icon {
     background: #FFF3F4 0% 0% no-repeat padding-box;
     border-radius: 5px;
+}
+
+.d-text {
+    color:inherit;
+}
+
+.d-text-selected {
+    color: #C8242F;
 }
 
 .d-dashboard-img {
@@ -811,4 +818,19 @@ body {
 .row{
     width:100%;
     justify-content:space-evenly;
+}
+
+#myTab .active{
+    border:none;
+    border-bottom:5px solid red;
+    color:red
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #ADADAD;
+    color: #ADADAD;
+}
+
+#myTab button {
+    color: #ADADAD;
 }

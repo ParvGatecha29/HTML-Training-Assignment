@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/dashboard.css">
     <title>Dashboard</title>
     <script>
         function openNav() {
             var x = document.getElementById("d-sidebar");
-            if (x.style.display == "block") {
-                x.style.display = "none";
-            }
-            else {
+            if (x.style.display == "none") {
                 x.style.display = "block";
             }
+            else {
+                x.style.display = "none";
+            }
+        }
+
+        function clickside(t) {
+            var s = document.getElementById("d-sidebar");
+            var e = s.getElementsByTagName("div");
+            for (var i = 0; i < e.length; i++) {
+                e[i].classList.remove("d-text-selected");
+                e[i].classList.remove("s-selected-icon");
+                var x = e[i].getElementsByTagName("img");
+                x[0].src = x[0].src.replace("active", "default");
+            }
+            t.classList.add("d-text-selected");
+            t.classList.add("s-selected-icon");
+            var x = t.getElementsByTagName("img");
+            x[0].src = x[0].src.replace("default", "active");
         }
     </script>
 </head>
@@ -36,44 +52,72 @@
             </div> -->
             <div class="col-xl-3 col-md-4 col-profile">
                 <img src="/images/notification-icon.svg" class="d-notifi-icon" alt="notification-icon">
-                <div>
-                    <img src="/images/profile.png" class="d-profile" alt="profile">
-                    <span class="profile-name">John Doe</span>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div>
+                            <img src="/images/profile.png" class="d-profile" alt="profile">
+                            <span class="profile-name">John Doe</span>
+                        </div>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-lg-start">
+                        <li>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                 </div>
+
                 <img src="/images/downward-arrow.svg" class="d-downward" alt="downward-arrow">
             </div>
         </div>
         <div class="d-middle">
             <div class="d-sidebar" id="d-sidebar">
-
-                <div class="d-dash-icon s-selected-icon sidebox">
-                    <img src="/images/dashboard-active.svg" class="d-dashboard-img" alt="">
-                    <span class="d-text-default d-text-selected">Dashboard</span>
-                </div>
-                <div class="d-analysis-icon sidebox">
-                    <img src="/images/graph-default.svg" class="d-graph-img" alt="">
-                    <span class="d-text-default">Analysis</span>
-                </div>
-                <div class="d-inbox-icon sidebox">
-                    <img src="/images/inbox-default.svg" class="d-inbox-img" alt="">
-                    <span class="d-text-default">Inbox</span>
-                </div>
-                <div class="d-history-icon sidebox">
-                    <img src="/images/clock-default.svg" class="d-clock-img" alt="">
-                    <span class="d-text-default">History</span>
-                </div>
-                <div class="d-users-icon sidebox">
-                    <img src="/images/user-default.svg" class="d-user-img" alt="">
-                    <span class="d-text-default">Users</span>
-                </div>
-                <div class="d-maintainance-icon sidebox">
-                    <img src="/images/maintenance-default.svg" class="d-maintenance-img" alt="">
-                    <span class="d-text-default">Maintanance</span>
-                </div>
-                <div class="d-setting-icon sidebox">
-                    <img src="/images/setting-default.svg" class="d-setting-img" alt="">
-                    <span class="d-text-default">Setting</span>
-                </div>
+                <button style="border:none;background:none">
+                    <div class="d-dash-icon s-selected-icon sidebox d-text-selected" onclick="clickside(this)">
+                        <img src="/images/dashboard-active.svg" class="d-dashboard-img" alt="">
+                        <span class="d-text-default d-text" id="dash">Dashboard</span>
+                    </div>
+                </button>
+                <button style="border:none;background:none">
+                    <div class="d-analysis-icon sidebox" onclick="clickside(this)">
+                        <img src="/images/graph-default.svg" class="d-graph-img" alt="">
+                        <span class="d-text-default d-text">Analysis</span>
+                    </div>
+                </button>
+                <button style="border:none;background:none">
+                    <div class="d-inbox-icon sidebox" onclick="clickside(this)">
+                        <img src="/images/inbox-default.svg" class="d-inbox-img" alt="">
+                        <span class="d-text-default d-text">Inbox</span>
+                    </div>
+                </button>
+                <button style="border:none;background:none">
+                    <div class="d-history-icon sidebox" onclick="clickside(this)">
+                        <img src="/images/clock-default.svg" class="d-clock-img" alt="">
+                        <span class="d-text-default d-text">History</span>
+                    </div>
+                </button>
+                <button style="border:none;background:none">
+                    <div class="d-users-icon sidebox" onclick="clickside(this)">
+                        <img src="/images/user-default.svg" class="d-user-img" alt="">
+                        <span class="d-text-default d-text">Users</span>
+                    </div>
+                </button>
+                <button style="border:none;background:none">
+                    <div class="d-maintainance-icon sidebox" onclick="clickside(this)">
+                        <img src="/images/maintenance-default.svg" class="d-maintenance-img" alt="">
+                        <span class="d-text-default d-text">Maintanance</span>
+                    </div>
+                </button>
+                <button style="border:none;background:none">
+                    <div class="d-setting-icon sidebox" onclick="clickside(this)">
+                        <img src="/images/setting-default.svg" class="d-setting-img" alt="">
+                        <span class="d-text-default d-text">Setting</span>
+                    </div>
+                </button>
             </div>
             <div class="d-dashboard">
 
@@ -181,13 +225,12 @@
                                 <td><span class="paid">Paid</span></td>
                                 <td>$47,800</td>
                             </tr>
-
                             <tr>
                                 <td>558612</td>
                                 <td>Other</td>
                                 <td>jessica.hanson@example.com</td>
                                 <td>24 May, 2020</td>
-                                <td class="paid">Paid</td>
+                                <td><span class="paid">Paid</span></td>
                                 <td>$98,000</td>
                             </tr>
 
@@ -196,7 +239,7 @@
                                 <td>Vendor</td>
                                 <td>alma.lawson@example.com</td>
                                 <td>8 Sep, 2020</td>
-                                <td class="paid">Paid</td>
+                                <td><span class="paid">Paid</span></td>
                                 <td>$20,900</td>
                             </tr>
 
@@ -205,7 +248,7 @@
                                 <td>Property Management Company</td>
                                 <td>kenzi.lawson@example.com</td>
                                 <td>22 Oct, 2020</td>
-                                <td class="paid">Paid</td>
+                                <td><span class="paid">Paid</span></td>
                                 <td>$10,570</td>
                             </tr>
 
@@ -214,7 +257,7 @@
                                 <td>Subcontractor Company</td>
                                 <td>jackson.graham@example.com</td>
                                 <td>1 Feb, 2020</td>
-                                <td class="failed">Failed</td>
+                                <td><span class="failed">Failed</span></td>
                                 <td>$10,200</td>
                             </tr>
 
@@ -223,7 +266,7 @@
                                 <td>Mortgage Company</td>
                                 <td>felicia.reid@example.com</td>
                                 <td>22 Oct, 2020</td>
-                                <td class="pending">Pending</td>
+                                <td><span class="pending">Pending</span></td>
                                 <td>$12,600</td>
                             </tr>
 
@@ -232,7 +275,7 @@
                                 <td>TPA</td>
                                 <td>dolores.chambers@example.com</td>
                                 <td>21 Sep, 2020</td>
-                                <td class="paid">Paid</td>
+                                <td><span class="paid">Paid</span></td>
                                 <td>$11,170</td>
                             </tr>
 
@@ -241,7 +284,7 @@
                                 <td>Fire Department</td>
                                 <td>nevaeh.simmons@example.com</td>
                                 <td>17 Oct, 2020</td>
-                                <td class="failed">Failed</td>
+                                <td><span class="failed">Failed</span></td>
                                 <td>$28,000</td>
                             </tr>
 
@@ -250,7 +293,7 @@
                                 <td>Insurance Carrier</td>
                                 <td>curtis.weaver@example.com</td>
                                 <td>21 Sep, 2020</td>
-                                <td class="paid">Paid</td>
+                                <td><span class="paid">Paid</span></td>
                                 <td>$10,000</td>
                             </tr>
                         </table>
@@ -259,5 +302,6 @@
             </div>
         </div>
     </div>
+    
 </body>
 </html>
