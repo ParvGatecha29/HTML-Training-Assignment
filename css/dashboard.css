@@ -334,7 +334,7 @@ body {
 .d-menu-bar {
     margin-top: 34px;
     margin-left: 29px;
-    width:30px;
+    transition:2s;
 }
 
 .col-logo {
@@ -379,7 +379,7 @@ body {
         margin-left: 10px;
         height: 40px;
         padding-left: 10px;
-        border:none;
+        border: none;
     }
 
     .d-logo {
@@ -429,7 +429,6 @@ body {
 /* sidebar */
 @media screen and (max-width:1100px) {
     .d-sidebar {
-        tra
         display: none;
     }
 }
@@ -446,7 +445,7 @@ body {
     padding-top: 25px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
-    transition:display 2s;
+    transition:all 2s;
 }
 
 .d-text-default {
@@ -476,7 +475,7 @@ body {
 }
 
 .d-text {
-    color:inherit;
+    color: inherit;
 }
 
 .d-text-selected {
@@ -526,8 +525,19 @@ body {
 
 .d-dashboard {
     margin-left: 3%;
-    width:100%
+    width: 100%
 }
+
+#d-sidebar div {
+    position: relative;
+    transition: 0.3s;
+    right: 1em;
+}
+
+    #d-sidebar div:hover {
+        right: 0em;
+        background: #FFF3F4 0% 0% no-repeat padding-box;
+    }
 
 .d-text8 {
     margin-top: 40px;
@@ -541,7 +551,7 @@ body {
 
 .d-displayboxes {
     display: flex;
-    width:100%;
+    width: 100%;
     margin-top: 22px;
 }
 
@@ -815,22 +825,7 @@ body {
     color: #BABABA;
 }
 
-.row{
-    width:100%;
-    justify-content:space-evenly;
-}
-
-#myTab .active{
-    border:none;
-    border-bottom:5px solid red;
-    color:red
-}
-
-.nav-tabs {
-    border-bottom: 2px solid #ADADAD;
-    color: #ADADAD;
-}
-
-#myTab button {
-    color: #ADADAD;
+.row {
+    width: 100%;
+    justify-content: space-evenly;
 }

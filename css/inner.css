@@ -108,8 +108,6 @@ button {
 .d-menu-bar {
     margin-top: 34px;
     margin-left: 29px;
-    width: 18px;
-    height: 12px;
 }
 
 .col-logo {
@@ -242,6 +240,17 @@ button {
     width: 183px;
     height: 43px;
 }
+
+#d-sidebar div {
+    position: relative;
+    transition: 0.3s;
+    right: 1em;
+}
+
+    #d-sidebar div:hover {
+        right: 0em;
+        background: #FFF3F4 0% 0% no-repeat padding-box;
+    }
 
 .s-selected-icon {
     background: #FFF3F4 0% 0% no-repeat padding-box;
@@ -604,10 +613,6 @@ h1 {
     font-size: 1.5rem;
 }
 
-input:focus {
-    border: 1px solid #FFF3F4;
-}
-
 .form-label {
     font-weight: bold;
 }
@@ -635,6 +640,11 @@ input:focus {
 .form-control {
     margin-top: 20px;
 }
+
+    .form-control:focus {
+        border-color: #C8242F;
+        box-shadow: none;
+    }
 
 
 .headings {
@@ -721,3 +731,28 @@ button {
 #myTab button {
     color: #ADADAD;
 }
+
+.input-field {
+    position: relative;
+    display: inline-block;
+    padding:0px;
+    display:flex;
+}
+
+    .input-field label {
+        padding: 3px;
+        pointer-events: none;
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        transition: 0.2s;
+        transition-timing-function: ease;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        opacity: 0.5;
+        background: #FAFAFA;
+    }
+
+    input:focus + label, input:not(:placeholder-shown) + label {
+        opacity: 1;
+        transform: scale(0.75) translateY(-90%) translateX(-25px);
+    }

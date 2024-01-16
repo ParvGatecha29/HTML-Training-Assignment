@@ -13,9 +13,9 @@
 <body>
     <div class="d-main-container container-fluid">
         <div class="d-header row">
-            <div class="col-xl-3 col-md-4 col-sm-6 col-menu">
+            <div class="col-xl-3 col-md-4 col-sm-6 col-menu pb-5">
                 <button type="button" onclick="openNav()" style="border:none; background: none;">
-                    <img src="/images/menu-bar.svg" class="d-menu-bar" alt="menu-bar">
+                    <img src="/images/menu-bar.svg" class="d-menu-bar mb-2" alt="menu-bar">
                 </button>
                 <img src="/images/logo.svg" class="d-logo" alt="logo">
             </div>
@@ -34,7 +34,7 @@
                             <span class="profile-name">John Doe</span>
                         </div>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-lg-start">
+                    <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item" href="#">Action</a>
                         </li>
@@ -57,7 +57,7 @@
                         <span class="d-text-default d-text" id="dash">Dashboard</span>
                     </div>
                 </button>
-                <button style="border:none;background:none">
+                <button style="border:none;background:none" onclick="location.href = 'innerpage.html';">
                     <div class="d-analysis-icon sidebox" onclick="clickside(this)">
                         <img src="/images/graph-default.svg" class="d-graph-img" alt="">
                         <span class="d-text-default d-text">Analysis</span>

@@ -12,11 +12,11 @@
     <script>
         function openNav() {
             var x = document.getElementById("d-sidebar");
-            if (x.style.display == "block") {
-                x.style.display = "none";
+            if (x.style.display == "none") {
+                x.style.display = "block";
             }
             else {
-                x.style.display = "block";
+                x.style.display = "none";
             }
         }
 
@@ -42,7 +42,7 @@
         <div class="d-header row">
             <div class="col-xl-3 col-md-4 col-sm-6 col-menu">
                 <button type="button" onclick="openNav()">
-                    <img src="/images/menu-bar.svg" class="d-menu-bar" alt="menu-bar">
+                    <img src="/images/menu-bar.svg" class="d-menu-bar mb-2" alt="menu-bar">
                 </button>
                 <img src="/images/logo.svg" class="d-logo" alt="logo">
             </div>
@@ -61,15 +61,15 @@
         </div>
         <div class="d-middle">
             <div class="d-sidebar" id="d-sidebar">
-                <button style="border:none;background:none">
-                    <div class="d-dash-icon s-selected-icon sidebox d-text-selected" onclick="clickside(this)">
-                        <img src="/images/dashboard-active.svg" class="d-dashboard-img" alt="">
+                <button style="border:none;background:none" onclick="location.href = 'dashboard.html';">
+                    <div class="d-dash-icon sidebox" onclick="clickside(this)">
+                        <img src="/images/dashboard-default.svg" class="d-dashboard-img" alt="">
                         <span class="d-text-default d-text" id="dash">Dashboard</span>
                     </div>
                 </button>
                 <button style="border:none;background:none">
-                    <div class="d-analysis-icon sidebox" onclick="clickside(this)">
-                        <img src="/images/graph-default.svg" class="d-graph-img" alt="">
+                    <div class="d-analysis-icon s-selected-icon sidebox d-text-selected" onclick="clickside(this)">
+                        <img src="/images/graph-active.svg" class="d-graph-img" alt="">
                         <span class="d-text-default d-text">Analysis</span>
                     </div>
                 </button>
@@ -111,11 +111,15 @@
                     </div>
                     <div class="row ms-5 my-3 form-header"> One column</div>
                     <div class="row ms-5 me-4 my-1">
-                        <input class="form-control" type="text" placeholder="Name" aria-label="default input example">
+                        <div class=" input-field">
+                            <input class="form-control" type="text" placeholder=" " aria-label="default input example">
+                            <label>Name</label>
+                        </div>
                     </div>
+
                     <div class="row ms-4 me-4 my-3">
                         <div class="input-group ms-3 my-3 me-4">
-                            <select class="form-select" id="inputGroupSelect01">
+                            <select class="form-control mt-1" id="inputGroupSelect01">
                                 <option selected>Dropdown</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -124,29 +128,38 @@
                         </div>
                     </div>
                     <div class="row ms-5 my-3">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                            placeholder="Multiple line"></textarea>
+                        <div class="input-field">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                      placeholder=" "></textarea>
+                            <label>Multiple Line</label>
+                        </div>
                     </div>
                     <div class="row form-header ms-5 my-3"> Two column</div>
                     <div class="row ms-5 my-3">
                         <div class="col-md-6">
-                            <input class="form-control" type="text" placeholder="Name"
-                                aria-label="default input example">
+                            <div class="input-field">
+                                <input class="form-control" type="text" placeholder=" "
+                                       aria-label="default input example">
+                                <label>Name</label>
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <input class="form-control" type="text" placeholder="Username"
-                                aria-label="default input example" value="johndoe">
+                                   aria-label="default input example" value="johndoe">
                         </div>
                     </div>
 
                     <div class="row ms-5 my-3">
                         <div class="col-md-6 ">
-                            <input class="form-control" type="password" placeholder="Password"
-                                aria-label="default input example">
+                            <div class="input-field">
+                                <input class="form-control" type="password" placeholder=" "
+                                       aria-label="default input example">
+                                <label>Password</label>
+                            </div>
                         </div>
                         <div class="col-md-6 mt-3 ">
                             <div class="input-group">
-                                <select class="form-select" id="inputGroupSelect01">
+                                <select class="form-control mt-1" id="inputGroupSelect01">
                                     <option selected>Dropdown</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -158,38 +171,52 @@
                     <div class="row form-header ms-5 my-3"> Three column</div>
                     <div class="row ms-5 my-3 ">
                         <div class="col-md-4">
-                            <input class="form-control" type="text" aria-label="default input example"
-                                style="border: 1px solid #c8242f">
+                            <div class="input-field">
+                                <input class="form-control" type="text" aria-label="default input example" placeholder=" "
+                                       style="border: 1px solid #c8242f">
+                                <label>Focus</label>
+                            </div>
                         </div>
                         <div class="col-md-4 ">
-                            <input class="form-control" type="password" placeholder="Password"
-                                aria-label="default input example" value=".........">
+                            <div class="input-field">
+                                <input class="form-control" type="password" placeholder=" "
+                                       aria-label="default input example" value=".........">
+                                <label>Password</label>
+                            </div>
                         </div>
                         <div class="col-md-4">
-                            <input class="form-control" type="text" value="johndoe" style="border: 1px dashed #ADADAD;">
+                            <input class="form-control" type="text" value="johndoe" style="border: 1px dashed #ADADAD;" disabled>
                         </div>
                     </div>
                     <div class="row form-header ms-5 my-3"> Four column</div>
 
                     <div class="row ms-5 my-3">
                         <div class="col-md-3">
-                            <input class="form-control" type="text" placeholder="Designation"
-                                aria-label="default input example" style="border: 1px solid red;">
+                            <div class="input-field">
+                                <input class="form-control" type="text" placeholder=" "
+                                       aria-label="default input example" style="border: 1px solid red;">
+                                <label>Designation</label>
+                            </div>
                             <small id="uidesign">Enter Valid Data</small>
                         </div>
-                        <div class="col-md-3 ">
-                            <input class="form-control" type="text" placeholder="Name"
-                                aria-label="default input example">
+                        <div class="col-md-3">
+                            <div class="input-field">
+                                <input class="form-control" type="text" placeholder=" "
+                                       aria-label="default input example">
+                                <label>Name</label>
+                            </div>
                             <small class="form-text text-muted">Enter your full name as per ID</small>
                         </div>
                         <div class="col-md-3 form-group">
-                            <label>Username</label>
-                            <input class="form-control input-lg" type="text" placeholder="Username"
-                                aria-label="default input example" value="johndoe">
+                            <div class="input-field">
+                                <input class="form-control input-lg" type="text" placeholder=" "
+                                       aria-label="default input example" value="johndoe">
+                                <label class="input-label">Username</label>
+                            </div>
                         </div>
                         <div class="col-md-3 mt-3">
                             <div class="input-group">
-                                <select class="form-select" id="inputGroupSelect01">
+                                <select class="form-control mt-1" id="inputGroupSelect01">
                                     <option selected>Select</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
@@ -215,32 +242,36 @@
 
                     <div class="row form-header ms-5 my-3"> Radio buttons</div>
 
-                    <div class="form-check form-check-inline ms-4 ">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
-                            style="accent-color: red;">
-                        <label class="form-check-label" for="inlineRadio1">Option1</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked
-                            style="accent-color: red;">
-                        <label class="form-check-label" for="inlineRadio2">Option2</label>
+                    <div class="d-flex">
+                        <div class="form-check form-check-inline ms-4 d-flex">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+                                   style="accent-color: red;" class="mt-1 mx-2">
+                            <p class="form-check-label" for="inlineRadio1">Option1</p>
+                        </div>
+                        <div class="form-check form-check-inline d-flex">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked
+                                   style="accent-color: red;" class="mt-1 mx-2">
+                            <p class="form-check-label" for="inlineRadio2">Option2</p>
+                        </div>
                     </div>
 
                     <div class="row form-header ms-5 my-3"> Checkbox</div>
 
-                    <div class="form-check form-check-inline ms-4 ">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1" style="accent-color: red;">
-                        <label class="form-check-label" for="inlineCheckbox1">Option1</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="checkbox" id="inlineCheckbox2" value="option2" checked style="accent-color: red;">
-                        <label class="form-check-label" for="inlineCheckbox2">Option2</label>
+                    <div class="d-flex">
+                        <div class="form-check form-check-inline ms-4 d-flex">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1" style="accent-color: red;" class="mt-1 mx-2">
+                            <p class="form-check-label" for="inlineCheckbox1">Option1</p>
+                        </div>
+                        <div class="form-check form-check-inline d-flex">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2" checked style="accent-color: red;" class="mt-1 mx-2">
+                            <p class="form-check-label" for="inlineCheckbox2">Option2</p>
+                        </div>
                     </div>
 
                     <div class="form-header row ms-5 my-3">Snackbar</div>
                     <div class="snackBar row ms-5 my-3">
                         <div class="col-md-6">
-                            <div class="left squareBox border-danger text-danger">
+                            <div class="left squareBox border-danger text-danger btn btn-outline-danger">
                                 <img src="images/error-icon.svg" alt=""><span class="message text-error">
                                     This is an
                                     error message!
@@ -248,7 +279,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="right squareBox" style="border: 1px solid #00B9E1; color: #00B9E1;">
+                            <div class="right squareBox btn btn-outline-info" style="border: 1px solid #00B9E1; color: #00B9E1;">
                                 <img src="images/info-icon.svg" alt=""><span class="message">
                                     This is an information
                                     message!
@@ -259,7 +290,7 @@
 
                     <div class="snackBar row ms-5 my-3">
                         <div class="col-md-6">
-                            <div class="left squareBox border-warning text-warning">
+                            <div class="left squareBox border-warning text-warning btn btn-outline-warning">
                                 <img src="images/warning-icon.svg" alt=""><span class="message">
                                     This is a warning
                                     message!
@@ -267,7 +298,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="right squareBox border-success text-success">
+                            <div class="right squareBox border-success text-success btn btn-outline-success">
                                 <img src="images/success-icon.svg" alt=""><span class="message">
                                     This is a Success
                                     message!
@@ -280,7 +311,7 @@
                     <div class="row ms-5 my-3">
                         <div class="callTOAction d-flex">
                             <button type="button" class="btn btn-danger rounded-pill"
-                                style="margin-right: 15px; width: 124px;">
+                                    style="margin-right: 15px; width: 124px;">
                                 Primary
                             </button>
                             <button type="button" class="btn btn-outline-danger rounded-pill" style="width: 145px;">
@@ -293,29 +324,35 @@
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
-                                data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
-                                aria-selected="true">Tab 1</button>
+                                    data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                    aria-selected="true">
+                                Tab 1
+                            </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
-                                data-bs-target="#profile-tab-pane" type="button" role="tab"
-                                aria-controls="profile-tab-pane" aria-selected="false">Tab 2</button>
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">
+                                Tab 2
+                            </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
-                                data-bs-target="#contact-tab-pane" type="button" role="tab"
-                                aria-controls="contact-tab-pane" aria-selected="false">Tab 3</button>
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">
+                                Tab 3
+                            </button>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
-                            aria-labelledby="home-tab" tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, delectus debitis. Corporis maxime repellat, blanditiis obcaecati temporibus asperiores nobis totam. Vitae tempore minus distinctio repudiandae nobis eum ipsum. Asperiores, quisquam neque. Sunt, cupiditate asperiores? Accusantium, molestiae qui non explicabo praesentium distinctio nihil dolore facilis, illum temporibus, aliquid impedit enim totam!</div>
+                             aria-labelledby="home-tab" tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, delectus debitis. Corporis maxime repellat, blanditiis obcaecati temporibus asperiores nobis totam. Vitae tempore minus distinctio repudiandae nobis eum ipsum. Asperiores, quisquam neque. Sunt, cupiditate asperiores? Accusantium, molestiae qui non explicabo praesentium distinctio nihil dolore facilis, illum temporibus, aliquid impedit enim totam!</div>
                         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-                            tabindex="0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, aspernatur rerum at, quam ipsa ipsum excepturi perspiciatis iure eum ducimus autem nisi voluptate reprehenderit ullam beatae provident expedita, eius magnam. Sequi voluptatibus possimus quis adipisci temporibus, architecto a ullam similique est deserunt neque cum, aut culpa? Tenetur quae laudantium nobis.</div>
+                             tabindex="0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, aspernatur rerum at, quam ipsa ipsum excepturi perspiciatis iure eum ducimus autem nisi voluptate reprehenderit ullam beatae provident expedita, eius magnam. Sequi voluptatibus possimus quis adipisci temporibus, architecto a ullam similique est deserunt neque cum, aut culpa? Tenetur quae laudantium nobis.</div>
                         <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
-                            tabindex="0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, aspernatur rerum at, quam ipsa ipsum excepturi perspiciatis iure eum ducimus autem nisi voluptate reprehenderit ullam beatae provident expedita, eius magnam. Sequi voluptatibus possimus quis adipisci temporibus, architecto a ullam similique est deserunt neque cum, aut culpa? Tenetur quae laudantium nobis.</div>
+                             tabindex="0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, aspernatur rerum at, quam ipsa ipsum excepturi perspiciatis iure eum ducimus autem nisi voluptate reprehenderit ullam beatae provident expedita, eius magnam. Sequi voluptatibus possimus quis adipisci temporibus, architecto a ullam similique est deserunt neque cum, aut culpa? Tenetur quae laudantium nobis.</div>
                         <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
-                            tabindex="0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, aspernatur rerum at, quam ipsa ipsum excepturi perspiciatis iure eum ducimus autem nisi voluptate reprehenderit ullam beatae provident expedita, eius magnam. Sequi voluptatibus possimus quis adipisci temporibus, architecto a ullam similique est deserunt neque cum, aut culpa? Tenetur quae laudantium nobis.</div>
+                             tabindex="0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, aspernatur rerum at, quam ipsa ipsum excepturi perspiciatis iure eum ducimus autem nisi voluptate reprehenderit ullam beatae provident expedita, eius magnam. Sequi voluptatibus possimus quis adipisci temporibus, architecto a ullam similique est deserunt neque cum, aut culpa? Tenetur quae laudantium nobis.</div>
                     </div>
                 </div>
             </div>
